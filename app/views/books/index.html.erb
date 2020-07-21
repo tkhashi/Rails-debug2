@@ -1,3 +1,19 @@
+
+<% if @book.errors.any? %>
+	<div class="error_explanation">
+		<h2><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
+			<ul>
+			<% @book.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+			</ul>
+	</div>
+<% end %>
+
+<div class="body">
+	<div class="container">
+		<p id="notice"></p>
+
 <div class="row">
 	<div class="col-xs-3">
 
@@ -38,7 +54,8 @@
 		</table>
 
 		<!--books一覧 -->
+</div>
 
-
+</div>
 	</div>
 </div>
